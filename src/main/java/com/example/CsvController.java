@@ -4,7 +4,6 @@ package com.example;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -18,12 +17,7 @@ public class CsvController {
 
     @GetMapping("/parse-csv")
     public List<SalesRecord> parseCsv() {
-        try {
-            return csvParserService.parseCsv();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-
-        }
+        return csvParserService.parseCsv();
     }
 
 

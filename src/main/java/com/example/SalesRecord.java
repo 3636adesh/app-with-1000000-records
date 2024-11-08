@@ -27,7 +27,7 @@ public class SalesRecord {
     private String orderDate;
 
     @CsvBindByName(column = "Order ID")
-    private long orderId;
+    private int orderId;
 
     @CsvBindByName(column = "Ship Date")
     private String shipDate;
@@ -49,4 +49,6 @@ public class SalesRecord {
 
     @CsvBindByName(column = "Total Profit")
     private double totalProfit;
+
+
 }
