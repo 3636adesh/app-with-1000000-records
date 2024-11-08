@@ -22,6 +22,7 @@ public class CsvController {
             return csvParserService.parseCsv();
         } catch (IOException e) {
             throw new RuntimeException(e);
+
         }
     }
 
